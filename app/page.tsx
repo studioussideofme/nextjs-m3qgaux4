@@ -2,159 +2,386 @@ export default function Home() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: '#0a0a0f',
+      background: '#000000',
       color: '#ffffff',
-      fontFamily: 'sans-serif',
+      fontFamily: "'Segoe UI', sans-serif",
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '24px',
     }}>
 
-      {/* Logo */}
-      <div style={{ marginBottom: '16px' }}>
-        <span style={{
-          fontSize: '48px',
-          fontWeight: '800',
-          background: 'linear-gradient(90deg, #a855f7, #3b82f6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          letterSpacing: '-1px',
-        }}>
-          animix
-        </span>
-      </div>
-
-      {/* Tagline */}
-      <p style={{
-        fontSize: '18px',
-        color: '#888',
-        marginBottom: '48px',
-        textAlign: 'center',
-        maxWidth: '400px',
-        lineHeight: '1.6',
-      }}>
-        Write code. Get stunning animations.<br />
-        No software. No limits.
-      </p>
-
-      {/* Split pane preview shell */}
-      <div style={{
+      {/* Top Navbar */}
+      <nav style={{
         display: 'flex',
-        width: '100%',
-        maxWidth: '900px',
-        height: '400px',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        border: '1px solid #222',
-        background: '#111',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        padding: '20px 48px',
+        borderBottom: '1px solid #1a1a1a',
       }}>
+        {/* Logo */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span style={{ fontSize: '28px', fontWeight: '300', color: '#fff' }}>∑</span>
+          <span style={{ fontSize: '22px', fontWeight: '700', letterSpacing: '-0.5px' }}>
+            <span style={{ color: '#ffffff' }}>Ani</span>
+            <span style={{ color: '#888888' }}>gist</span>
+          </span>
+        </div>
 
-        {/* Left - Code side */}
+        {/* Nav links */}
+        <div style={{ display: 'flex', gap: '32px', fontSize: '14px', color: '#666' }}>
+          <span style={{ cursor: 'pointer', transition: 'color 0.2s' }}>Docs</span>
+          <span style={{ cursor: 'pointer' }}>Examples</span>
+          <span style={{ cursor: 'pointer' }}>Community</span>
+        </div>
+
+        {/* Nav CTA */}
+        <div style={{ display: 'flex', gap: '12px' }}>
+          <button style={{
+            padding: '8px 20px',
+            background: 'transparent',
+            border: '1px solid #333',
+            borderRadius: '6px',
+            color: '#888',
+            fontSize: '14px',
+            cursor: 'pointer',
+          }}>Sign in</button>
+          <button style={{
+            padding: '8px 20px',
+            background: '#ffffff',
+            border: 'none',
+            borderRadius: '6px',
+            color: '#000',
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+          }}>Get started free</button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '80px 48px 60px',
+        textAlign: 'center',
+      }}>
+        {/* Badge */}
         <div style={{
-          flex: 1,
-          padding: '24px',
-          borderRight: '1px solid #222',
-          fontFamily: 'monospace',
-          fontSize: '13px',
-          color: '#a855f7',
-          lineHeight: '2',
-          overflowY: 'auto',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '6px 16px',
+          background: '#111',
+          border: '1px solid #222',
+          borderRadius: '100px',
+          fontSize: '12px',
+          color: '#888',
+          marginBottom: '32px',
         }}>
-          <div style={{ color: '#555', marginBottom: '12px', fontSize: '11px' }}>// animix code</div>
-          <div><span style={{ color: '#3b82f6' }}>scene</span> intro <span style={{ color: '#888' }}>duration=5s</span></div>
-          <div style={{ paddingLeft: '16px' }}>
-            <div><span style={{ color: '#3b82f6' }}>object</span> hero <span style={{ color: '#888' }}>type=circle</span></div>
-            <div style={{ paddingLeft: '16px', color: '#888' }}>
-              <div>keyframe t=0s pos=(100,200) opacity=0</div>
-              <div>keyframe t=1s pos=(400,200) opacity=1</div>
-              <div>keyframe t=4s pos=(700,200) scale=2</div>
+          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#fff', display: 'inline-block' }} />
+          Free forever · No software needed
+        </div>
+
+        {/* Big heading */}
+        <h1 style={{
+          fontSize: '72px',
+          fontWeight: '800',
+          lineHeight: '1.05',
+          letterSpacing: '-3px',
+          marginBottom: '24px',
+          maxWidth: '800px',
+        }}>
+          <span style={{ color: '#ffffff' }}>∑ Ani</span>
+          <span style={{ color: '#444' }}>gist</span>
+          <br />
+          <span style={{ fontSize: '40px', fontWeight: '300', color: '#444', letterSpacing: '-1px' }}>
+            write code. see it move.
+          </span>
+        </h1>
+
+        {/* Description */}
+        <p style={{
+          fontSize: '17px',
+          color: '#555',
+          maxWidth: '480px',
+          lineHeight: '1.7',
+          marginBottom: '40px',
+        }}>
+          Manigist is your free, browser-based animation studio. 
+          Type a few lines of code on the left — 
+          watch stunning animations come alive on the right. 
+          No installs. No limits. Just pure creation. ✨
+        </p>
+
+        {/* CTA Buttons */}
+        <div style={{ display: 'flex', gap: '12px', marginBottom: '80px' }}>
+          <button style={{
+            padding: '14px 36px',
+            background: '#ffffff',
+            border: 'none',
+            borderRadius: '8px',
+            color: '#000',
+            fontSize: '15px',
+            fontWeight: '700',
+            cursor: 'pointer',
+            letterSpacing: '-0.3px',
+          }}>
+            Start animating →
+          </button>
+          <button style={{
+            padding: '14px 36px',
+            background: 'transparent',
+            border: '1px solid #222',
+            borderRadius: '8px',
+            color: '#666',
+            fontSize: '15px',
+            cursor: 'pointer',
+          }}>
+            Watch demo
+          </button>
+        </div>
+
+        {/* App Preview */}
+        <div style={{
+          width: '100%',
+          maxWidth: '1000px',
+          borderRadius: '16px',
+          border: '1px solid #1a1a1a',
+          overflow: 'hidden',
+          background: '#0a0a0a',
+        }}>
+
+          {/* App top bar */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '12px 20px',
+            borderBottom: '1px solid #1a1a1a',
+            background: '#050505',
+          }}>
+            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#333' }} />
+            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#333' }} />
+            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#333' }} />
+            <span style={{ marginLeft: '12px', fontSize: '12px', color: '#333' }}>manigist.vercel.app</span>
+          </div>
+
+          {/* App body — split pane */}
+          <div style={{ display: 'flex', height: '420px' }}>
+
+            {/* Sidebar */}
+            <div style={{
+              width: '52px',
+              borderRight: '1px solid #1a1a1a',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              padding: '16px 0',
+              gap: '20px',
+            }}>
+              {['⊞', '◈', '▷', '⚙'].map((icon, i) => (
+                <div key={i} style={{
+                  width: '32px',
+                  height: '32px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '6px',
+                  background: i === 0 ? '#1a1a1a' : 'transparent',
+                  color: i === 0 ? '#fff' : '#333',
+                  fontSize: '16px',
+                  cursor: 'pointer',
+                }}>
+                  {icon}
+                </div>
+              ))}
+            </div>
+
+            {/* Code editor */}
+            <div style={{
+              flex: 1,
+              padding: '20px',
+              fontFamily: 'monospace',
+              fontSize: '13px',
+              lineHeight: '2',
+              borderRight: '1px solid #1a1a1a',
+              overflowY: 'auto',
+            }}>
+              <div style={{ color: '#333', fontSize: '11px', marginBottom: '12px' }}>scene.mg</div>
+              <div><span style={{ color: '#555' }}>// Manigist animation script</span></div>
+              <div style={{ marginTop: '8px' }}>
+                <span style={{ color: '#fff' }}>scene</span>
+                <span style={{ color: '#444' }}> intro </span>
+                <span style={{ color: '#666' }}>duration=5s</span>
+              </div>
+              <div style={{ paddingLeft: '16px' }}>
+                <div>
+                  <span style={{ color: '#fff' }}>object</span>
+                  <span style={{ color: '#444' }}> hero </span>
+                  <span style={{ color: '#666' }}>type=circle</span>
+                </div>
+                <div style={{ paddingLeft: '16px', color: '#444' }}>
+                  <div>keyframe <span style={{ color: '#666' }}>t=0s</span> pos=(100,200) opacity=0</div>
+                  <div>keyframe <span style={{ color: '#666' }}>t=1s</span> pos=(400,200) opacity=1</div>
+                  <div>keyframe <span style={{ color: '#666' }}>t=4s</span> pos=(700,200) scale=2</div>
+                </div>
+              </div>
+              <div style={{ marginTop: '12px' }}>
+                <span style={{ color: '#fff' }}>camera</span>
+                <span style={{ color: '#444' }}> pan </span>
+                <span style={{ color: '#666' }}>from=(0,0) to=(200,0)</span>
+              </div>
+              {/* Cursor blink */}
+              <div style={{ marginTop: '8px', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                <span style={{ color: '#444' }}>easing=</span>
+                <span style={{
+                  display: 'inline-block',
+                  width: '2px',
+                  height: '14px',
+                  background: '#fff',
+                  animation: 'blink 1s infinite',
+                }} />
+              </div>
+            </div>
+
+            {/* Preview canvas */}
+            <div style={{
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: '#050505',
+              position: 'relative',
+              overflow: 'hidden',
+            }}>
+              {/* Grid dots background */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: 'radial-gradient(circle, #1a1a1a 1px, transparent 1px)',
+                backgroundSize: '24px 24px',
+              }} />
+
+              {/* Animated circle */}
+              <div style={{
+                width: '72px',
+                height: '72px',
+                borderRadius: '50%',
+                background: '#ffffff',
+                animation: 'move 3s ease-in-out infinite',
+                position: 'relative',
+                zIndex: 1,
+                boxShadow: '0 0 60px #ffffff30',
+              }} />
+
+              {/* Orbit ring */}
+              <div style={{
+                position: 'absolute',
+                width: '160px',
+                height: '160px',
+                borderRadius: '50%',
+                border: '1px solid #1a1a1a',
+                animation: 'spin 4s linear infinite',
+              }} />
+
+              <div style={{
+                position: 'absolute',
+                bottom: '12px',
+                right: '12px',
+                fontSize: '10px',
+                color: '#222',
+              }}>
+                preview · 60fps
+              </div>
             </div>
           </div>
-          <div style={{ marginTop: '16px' }}>
-            <span style={{ color: '#3b82f6' }}>camera</span> <span style={{ color: '#888' }}>pan from=(0,0) to=(200,0)</span>
-          </div>
+
+          {/* Timeline bar */}
           <div style={{
-            marginTop: '32px',
-            padding: '8px 16px',
-            background: '#1a1a2e',
-            borderRadius: '8px',
-            border: '1px solid #a855f720',
-            color: '#a855f7',
-            fontSize: '12px',
+            padding: '10px 20px',
+            borderTop: '1px solid #1a1a1a',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
           }}>
-            ▶ Rendering...
+            <span style={{ fontSize: '12px', color: '#333' }}>▶</span>
+            <div style={{
+              flex: 1,
+              height: '2px',
+              background: '#1a1a1a',
+              borderRadius: '2px',
+              position: 'relative',
+            }}>
+              <div style={{
+                width: '30%',
+                height: '100%',
+                background: '#ffffff',
+                borderRadius: '2px',
+              }} />
+            </div>
+            <span style={{ fontSize: '11px', color: '#333', fontFamily: 'monospace' }}>1.5s / 5s</span>
           </div>
         </div>
+      </section>
 
-        {/* Right - Preview side */}
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: '#0d0d1a',
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-          {/* Animated circle */}
-          <div style={{
-            width: '80px',
-            height: '80px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #a855f7, #3b82f6)',
-            animation: 'pulse 2s ease-in-out infinite',
-            boxShadow: '0 0 40px #a855f750',
-          }} />
-          <style>{`
-            @keyframes pulse {
-              0%, 100% { transform: scale(1); opacity: 1; }
-              50% { transform: scale(1.2); opacity: 0.8; }
-            }
-          `}</style>
-          <div style={{
-            position: 'absolute',
-            bottom: '16px',
-            right: '16px',
-            fontSize: '11px',
-            color: '#333',
+      {/* Features */}
+      <section style={{
+        padding: '80px 48px',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '1px',
+        background: '#111',
+        borderTop: '1px solid #111',
+        borderBottom: '1px solid #111',
+      }}>
+        {[
+          { icon: '∑', title: 'Simple syntax', desc: 'Write animations in plain readable code. No PhD required — if you can type, you can animate.' },
+          { icon: '◎', title: 'Any length, free', desc: 'Export 5 seconds or 5 hours. No paywalls, no watermarks, no limits. Ever.' },
+          { icon: '⟳', title: 'Live preview', desc: 'See your animation update in real time as you type. Instant feedback, zero lag.' },
+        ].map((f, i) => (
+          <div key={i} style={{
+            padding: '48px 40px',
+            background: '#000',
+            borderRight: i < 2 ? '1px solid #111' : 'none',
           }}>
-            preview
+            <div style={{ fontSize: '28px', marginBottom: '16px', color: '#fff' }}>{f.icon}</div>
+            <h3 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '10px', color: '#fff' }}>{f.title}</h3>
+            <p style={{ fontSize: '14px', color: '#444', lineHeight: '1.7' }}>{f.desc}</p>
           </div>
+        ))}
+      </section>
+
+      {/* Footer */}
+      <footer style={{
+        padding: '32px 48px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderTop: '1px solid #111',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ fontSize: '18px', color: '#333' }}>∑</span>
+          <span style={{ fontSize: '14px', color: '#333' }}>Manigist · free forever</span>
         </div>
-      </div>
+        <span style={{ fontSize: '12px', color: '#222' }}>made with ♥ for creators</span>
+      </footer>
 
-      {/* CTA */}
-      <div style={{ marginTop: '40px', display: 'flex', gap: '16px' }}>
-        <button style={{
-          padding: '12px 32px',
-          background: 'linear-gradient(90deg, #a855f7, #3b82f6)',
-          border: 'none',
-          borderRadius: '8px',
-          color: '#fff',
-          fontSize: '15px',
-          fontWeight: '600',
-          cursor: 'pointer',
-        }}>
-          Start Creating →
-        </button>
-        <button style={{
-          padding: '12px 32px',
-          background: 'transparent',
-          border: '1px solid #333',
-          borderRadius: '8px',
-          color: '#888',
-          fontSize: '15px',
-          cursor: 'pointer',
-        }}>
-          See examples
-        </button>
-      </div>
-
-      <p style={{ marginTop: '48px', fontSize: '12px', color: '#333' }}>
-        animix — free forever
-      </p>
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        @keyframes move {
+          0%, 100% { transform: translateX(-60px); }
+          50% { transform: translateX(60px); }
+        }
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
     </main>
   )
 }
